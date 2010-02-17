@@ -1,0 +1,6 @@
+
+export(sim.bd.taxa, sim.bd.age, sim.bd.taxa.age, sim.rateshift.taxa, sim.gsa.taxa)
+
+import(ape, geiger)
+
+
