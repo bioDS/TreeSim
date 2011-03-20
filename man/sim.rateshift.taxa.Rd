@@ -61,7 +61,7 @@ c(0.6,0.1),c(0,0.3),complete=FALSE)
 
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
-\keyword{ mass extinction }
-\keyword{ simulating trees }
-\keyword{ phylogenetic tree }
-\keyword{rateshift}
+%\keyword{ mass extinction }
+%\keyword{ simulating trees }
+%\keyword{ phylogenetic tree }
+%\keyword{rateshift}

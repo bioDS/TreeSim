@@ -63,6 +63,6 @@ sim.bd.taxa(n,numbsim,lambda,mu,frac,complete=FALSE,stochsampling=FALSE)
 
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
-\keyword{birth-death tree}
-\keyword{ phylogenetic tree}
-\keyword{simulation}% __ONLY ONE__ keyword per line
+%\keyword{birth-death tree}
+%\keyword{ phylogenetic tree}
+%\keyword{simulation}% __ONLY ONE__ keyword per line

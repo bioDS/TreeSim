@@ -11,8 +11,8 @@ The package simulates phylogenetic trees under a constant-rate birth-death proce
 \tabular{ll}{
 Package: \tab TreeSim\cr
 Type: \tab Package\cr
-Version: \tab 1.0\cr
-Date: \tab 2010-02-17\cr
+Version: \tab 1.1\cr
+Date: \tab 2011-03-20\cr
 License: \tab GPL-2  \cr
 LazyLoad: \tab yes\cr
 }
@@ -30,7 +30,7 @@ K. Hartmann, D. Wong,  T. Stadler: Sampling trees from evolutionary models. To a
 T. Stadler: On incomplete sampling under birth-death models and connections to the sampling-based coalescent.
 J. Theo. Biol. (2009) 261: 58-66.
 }
-\keyword{tree, phylogeny, simulation}
+%\keyword{tree, phylogeny, simulation}
 \seealso{
 \code{ape}
 \code{geiger}

@@ -53,6 +53,6 @@ t<-sim.bd.taxa(m,numbsim,lambda,mu)
 t2<-sim.gsa.taxa(t,n)
 }
 
-\keyword{tree}
-\keyword{general sampling approach}% __ONLY ONE__ keyword per line
-\keyword{simulation}
+%\keyword{tree}
+%\keyword{general sampling approach}% __ONLY ONE__ keyword per line
+%\keyword{simulation}

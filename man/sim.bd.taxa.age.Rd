@@ -1,7 +1,7 @@
 \name{sim.bd.taxa.age}
 \alias{sim.bd.taxa.age}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{sim.bd.taxa: Simulating birth-death trees with a given age on a fixed number of extant taxa}
+\title{sim.bd.taxa.age: Simulating birth-death trees with a given age on a fixed number of extant taxa}
 \description{
 sim.bd.taxa.age simulates trees on n species with a (i) fixed time since origin or (ii) fixed time since the most recent common ancestor of the sampled species under the constant rate birth-death process. The method allows for incomplete sampling, i.e. each tip from a big tree is included with a fixed probability. The tree is conditioned to have n tips after sampling and a fixed time since origin or since the most recent common ancestor of the sampled species.
 }
@@ -62,6 +62,6 @@ sim.bd.taxa.age(n, numbsim, lambda, mu, frac, age, mrca = TRUE)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
-\keyword{birth-death tree}
-\keyword{ phylogenetic tree}
-\keyword{simulation}% __ONLY ONE__ keyword per line
+%\keyword{birth-death tree}
+%\keyword{ phylogenetic tree}
+%\keyword{simulation}% __ONLY ONE__ keyword per line
