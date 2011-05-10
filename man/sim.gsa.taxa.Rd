@@ -27,7 +27,7 @@ When complete = TRUE: We set frac = 1.}
 }
 \references{T. Stadler: Simulating trees on a fixed number of extant species. Submitted. 2010.
 
-K. Hartmann, D. Wong, T. Stadler: Sampling trees from evolutionary models. To appear in Syst. Biol. 2010.}
+K. Hartmann, D. Wong, T. Stadler: Sampling trees from evolutionary models.  Syst. Biol. (2010) 59: 465-476.}
 \author{Tanja Stadler}
 %\note{ %~~further notes~~ 
 %~Make other sections like Warning with \section{Warning }{....} ~

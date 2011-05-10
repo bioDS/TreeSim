@@ -1,5 +1,4 @@
-sim2.bd.mrca <-
-function(mrca,numbsim,lambda,mu){
+sim2.bd.mrca <- function(mrca,numbsim,lambda,mu){
 	phy <- list()
 	for (j in 1:numbsim) {
 		
@@ -36,11 +35,10 @@ function(mrca,numbsim,lambda,mu){
 			t$edge.length <- c(mrca,t$edge.length)
 			t$tip.label <- paste("t", sample(t$Nnode+1), sep = "")
 		} else {
-			t<- sim2.bd.fast(2,1,1,0,1)[[1]]
+			t<- sim2.bd.fast(2,1,1,0,1)[[1]][[1]]
 			t$edge.length <- t$edge.length*0+mrca
 		} 
 		phy <- c(phy,list(t))
 	}
 	phy	
-	}
-
+	}	

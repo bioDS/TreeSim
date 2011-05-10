@@ -1,5 +1,4 @@
-sim2.bd.rateshift.single <-
-function(n,lambdavec,muvec,frac,times){
+sim2.bd.rateshift.single <- function(n,lambdavec,muvec,frac,times){
 	check <- 0
 	sumratiolam <- 0
 	for (j in 1:length(lambdavec)){
@@ -113,6 +112,6 @@ class(phy) <- "phylo"
 #phy2<-phy
 phy2<-collapse.singles(phy)
 phy2<-reorder(phy2)
-phy2
-}
-
+phy3<-list(phy2,time)
+phy3
+}	

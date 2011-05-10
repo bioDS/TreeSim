@@ -1,17 +1,4 @@
-sim.bd.age <-
-function(age,numbsim,lambda,mu,frac=1,mrca=FALSE,complete=TRUE) {
-	if (mrca == FALSE) {
-		phy <- sim2.bd.age(age,numbsim,lambda,mu)
-		if (complete==FALSE) {
-			phy <- reconstructed.age(phy,frac)
-		}
-	} else {
-		if (complete == TRUE) {
-			phy <- sim2.bd.mrca(age,numbsim,lambda,mu)
-		}	else {
-			phy <- sim2.bd.mrca.reconst(age,numbsim,lambda,mu,frac)
-			}
+sim.bd.age <-function(age,numbsim,lambda,mu,frac=1,mrca=FALSE,complete=TRUE){
+	out<-lapply(1:numbsim,sim.bd.age.help,age=age,lambda=lambda,mu=mu,frac=frac,mrca=mrca,complete=complete)
+	out
 	}
-	phy
-	}
-

@@ -11,8 +11,8 @@ The package simulates phylogenetic trees under a constant-rate birth-death proce
 \tabular{ll}{
 Package: \tab TreeSim\cr
 Type: \tab Package\cr
-Version: \tab 1.1\cr
-Date: \tab 2011-03-20\cr
+Version: \tab 1.3\cr
+Date: \tab 2011-05-10\cr
 License: \tab GPL-2  \cr
 LazyLoad: \tab yes\cr
 }
@@ -23,9 +23,9 @@ Tanja Stadler
  <http://www.tb.ethz.ch/people/tstadler>
 }
 \references{
-T. Stadler: Simulating trees on a fixed number of extant species. Submitted. 2010.
+Simulating trees on a fixed number of extant species. Syst. Biol. (2011).
 
-K. Hartmann, D. Wong,  T. Stadler: Sampling trees from evolutionary models. To appear in Syst. Biol. 2010.
+K. Hartmann, D. Wong,  T. Stadler: Sampling trees from evolutionary models. Syst. Biol. (2010) 59: 465-476.
 
 T. Stadler: On incomplete sampling under birth-death models and connections to the sampling-based coalescent.
 J. Theo. Biol. (2009) 261: 58-66.

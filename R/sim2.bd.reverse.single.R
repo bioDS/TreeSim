@@ -1,5 +1,4 @@
-sim2.bd.reverse.single <-
-function(n,lambda,mu,frac){
+sim2.bd.reverse.single <- function(n,lambda,mu,frac){
 	maxleaf <- round(n/frac)
 	leaves<- 1:maxleaf
 	nodes<- leaves
@@ -68,6 +67,6 @@ phy$Nnode <- maxleaf+extinct
 class(phy) <- "phylo"
 phy2<-collapse.singles(phy)
 phy2<-reorder(phy2)
+phy2<-list(phy2,time)
 phy2
-}
-
+}	

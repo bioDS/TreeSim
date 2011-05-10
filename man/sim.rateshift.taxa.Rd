@@ -23,10 +23,11 @@ sim.rateshift.taxa(n, numbsim, lambda, mu, frac, times, complete = TRUE)
 %todo
 %}
 \value{
-  \item{treearray }{Array of numbsim simulated trees with n extant sampled leaves}
+  \item{out[[1]] }{List of numbsim simulated trees with n extant sampled leaves}
+ \item{out[[2]] }{Vector of age of trees (time to root plus length of edge above root)}
 }
 \references{
-T. Stadler: Simulating trees on a fixed number of extant species. Submitted. 2010.
+T. Stadler: Simulating trees on a fixed number of extant species. Syst. Biol. (2011).
 }
 \author{Tanja Stadler }
 %\note{ %~~further notes~~ 

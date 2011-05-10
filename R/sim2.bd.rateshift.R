@@ -1,9 +1,10 @@
-sim2.bd.rateshift <-
-function(n,numbsim,lambda,mu,frac,times){	phy <- list()
+sim2.bd.rateshift <- function(n,numbsim,lambda,mu,frac,times){	phy <- list()
+	time<-vector()
 	for (j in 1:numbsim){
 		temp <- sim2.bd.rateshift.single(n,lambda,mu,frac,times)
-		phy <- c(phy, list(temp))
+		phy <- c(phy, list(temp[[1]]))
+		time<-c(time,temp[[2]])
 		}
-	phy
+	phy2<-list(phy,time)
+	phy2
 }
-

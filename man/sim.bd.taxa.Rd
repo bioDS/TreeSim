@@ -23,9 +23,11 @@ When complete = TRUE: all extinct and non-sampled lineages are included, i.e. th
 %\details{
 %todo}
 \value{
-\item{treearray }{Array of numbsim simulated trees with n extant sampled leaves}
+\item{out[[1]] }{List of numbsim simulated trees with n extant sampled leaves}
+ \item{out[[2]] }{Vector of age of trees (time to root plus length of edge above root)}
+
 }
-\references{ T. Stadler: Simulating trees on a fixed number of extant species. Submitted. 2010.
+\references{ T. Stadler: Simulating trees on a fixed number of extant species. Syst. Biol. (2011).
 
 T. Stadler: On incomplete sampling under birth-death models and connections to the sampling-based coalescent.
 J. Theo. Biol. (2009) 261: 58-66.}
@@ -40,7 +42,6 @@ lambda <- 2.0
 mu <- 0.5
 frac <-0.6
 numbsim<-2
-age<-2
 
 ##
 # Simulating numbsim trees with n species under a birth-death process with 
