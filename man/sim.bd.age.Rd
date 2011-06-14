@@ -3,16 +3,17 @@
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{sim.bd.age: Simulating birth-death trees of a fixed age}
 \description{
-sim.bd.age simulates trees conditioned on (i) the time since origin or (ii) the time since the most recent common ancestor of the extant tips under the constant rate birth-death process. The method allows for incomplete sampling: only a fixed fraction of all tips is included in the sampled tree.}
+sim.bd.age simulates trees conditioned on (i) the time since origin or (ii) the time since the most recent common ancestor of the extant tips under the constant rate birth-death process. The method allows for incomplete sampling: only a fixed fraction of all tips is included in the sampled tree. The method assumes constant birth and death rates, or allows for a density-dependent birth rate.}
 \usage{
 sim.bd.age(age, numbsim, lambda, mu, frac = 1, mrca = FALSE,
- complete = TRUE)
+ complete = TRUE, K = 0)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{age}{Time since origin / most recent common ancestor}
   \item{numbsim}{Number of trees to simulate}
   \item{lambda}{Speciation rate}
+  \item{K}{If K=0, then lambda is constant. If K>0, density-dependent speciation is assumed, with speciation rate lambda(1-m/K) when there are m extant species.}
   \item{mu}{Extinction rate}
   \item{frac}{Sampling fraction: The actual number of tips is n/frac, but only n tips are included (incomplete sampling).}  
   \item{mrca}{If mrca=FALSE: age is time since origin. If mrca=TRUE: age is time since most recent common ancestor of the extant tips.}

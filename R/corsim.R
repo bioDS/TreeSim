@@ -15,12 +15,23 @@ if (told == 0){
 			origin<- -(r^(1/n)/(lambda *(-1 + r^(1/n)* rho)))
 		}
 	}
-	ranks<-0:(length(x)+1)
-	times<-c(origin,x,0)
+	if (tyoung==0){
+		ranks<-0:(length(x)+1)
+		times<-c(origin,x,0)
+	} else {
+		missyoung<-length(which(x<tyoung))
+		times<-c(0,x[1:(length(x)-missyoung)],tyoung)
+		ranks<-1:length(times)
+		ranks<-ranks-1
+	}
 } else {
 	missold<-length(which(x>told))
 	missyoung<-length(which(x<tyoung))
-	times<-c(told,x[(missold+1):(length(x)-missyoung)],tyoung)
+	if (missold<length(x)){
+		times<-c(told,x[(missold+1):(length(x)-missyoung)],tyoung)
+	} else {
+		times<-c(told,tyoung)	
+	}
 	ranks<-1:length(times)
 	ranks<-ranks+missold-1
 	}
@@ -28,6 +39,7 @@ if (told == 0){
 
 while(missing>0){
 #distrranks[i]: prob insert between ranks[i] and ranks[i+1]
+if (length(ranks)>2){
 distrranks<-vector()
 for (i in 2:length(ranks)){
 	temp <- ranks[i] * (intp1(times[i-1],lambda,mu) - intp1(times[i],lambda,mu))
@@ -40,7 +52,7 @@ r <- runif(1,0,1)
 addrank<-min(which(distrranks>r))
 # addrank=k means adding between ranks[k] and ranks[k+1] in time
 # means adding to ranks[k+1] lineages
-
+} else {addrank<-1}
 r <- runif(1,0,1)
 const<-intp1(times[addrank],lambda,mu) - intp1(times[(addrank+1)],lambda,mu)
 temp<-  intp1(times[(addrank+1)],lambda,mu)/const

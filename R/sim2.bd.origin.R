@@ -1,5 +1,6 @@
 sim2.bd.origin <-
-function(n,age, lambda,mu){
+function(n,age, lambda,mu,K){
+lambda0<-lambda
 edge <- c(-1,-2)		#matrix of edges
 leaves <- c(-2)			#list of extant leaves
 timecreation <-c(0,0)		#time when species -2, -3, ... -n was created after origin
@@ -21,6 +22,9 @@ if (length(leaves) == 0){
 		} else {	
 timestep <- rexp(1,(length(leaves)*(lambda+mu)))    #time since last event
 if ((age > 0 && (time+timestep) < age) || age == 0) {
+if (K>0) {lambda<-lambda0*(1-length(leaves)/K)
+	if (lambda<0) {lambda<-0}
+	}
 time = time+timestep			#time after origin
 species <- sample(leaves,1)  	#the leaf undergoing the next event
 del <- which(leaves == species)
