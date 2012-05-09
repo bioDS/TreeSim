@@ -1,5 +1,5 @@
 
-export(sim.bd.taxa, sim.bd.age, sim.bd.taxa.age, sim.rateshift.taxa, sim.gsa.taxa,corsim,LTT.average.root)
+export(sim.bd.taxa, sim.bd.age, sim.bd.taxa.age, sim.rateshift.taxa, sim.gsa.taxa,corsim,LTT.plot,LTT.plot.gen,getx,sim.bdtypes.stt.taxa,sim.bdsky.stt)
 
 import(ape, geiger)
 

@@ -25,7 +25,7 @@ sim.bd.age(age, numbsim, lambda, mu, frac = 1, mrca = FALSE,
 \value{
 \item{treearray }{Array of numbsim trees with the time since origin / most recent common ancestor being age. If tree goes extinct (only possible when mrca = FALSE), returns 0. If only one extant and no extinct tips, returns 1.}
 }
-\references{Simulating trees on a fixed number of extant species. Syst. Biol. (2011). }
+\references{T. Stadler: Simulating trees on a fixed number of extant species. Syst. Biol. (2011) 60: 676-684. }
 \author{Tanja Stadler}
 %\note{%todo
 %}

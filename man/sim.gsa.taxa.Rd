@@ -8,7 +8,7 @@ sim.gsa.taxa samples trees on n tips appropriately (using the GSA approach, see 
 
 Note that the number of trees in the output is significantly smaller than the number of trees in the input (in order to have correct sampling).}
 \usage{
-sim.gsa.taxa(treearray, n, frac = 1, sampling = 40, complete = TRUE)
+sim.gsa.taxa(treearray, n, frac = 1, sampling = 1, complete = TRUE)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -50,7 +50,7 @@ lambda <- 2.0
 mu <- 0.5
 
 t<-sim.bd.taxa(m,numbsim,lambda,mu)
-t2<-sim.gsa.taxa(t,n)
+t2<-sim.gsa.taxa(t[[1]],n)
 }
 
 %\keyword{tree}

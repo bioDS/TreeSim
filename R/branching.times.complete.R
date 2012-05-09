@@ -14,6 +14,6 @@ function(tree){
     names(xx) <- if (is.null(tree$node.label)) 
         (n + 1):(n + tree$Nnode)
     else tree$node.label
-    xx
+      xx
 	}
 

@@ -6,7 +6,7 @@
 sim.rateshift.taxa simulates trees on n species under the constant rate birth-death process. At user-specified points in the past, the rates can shift. Further, mass extinction events can be incorporated. The method further allows for incomplete sampling, i.e. only a fixed fraction of all tips is included in the sampled tree. The tree is conditioned to have n tips after sampling.
 }
 \usage{
-sim.rateshift.taxa(n, numbsim, lambda, mu, frac, times, complete = TRUE)
+sim.rateshift.taxa(n, numbsim, lambda, mu, frac, times, complete = TRUE, K=0, norm = TRUE)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -18,6 +18,8 @@ sim.rateshift.taxa(n, numbsim, lambda, mu, frac, times, complete = TRUE)
 }
   \item{times}{Vector of mass extinction and rate shift times. Time is 0 today and increasing going backwards in time. Specify the vector as times[i]<times[i+1]. times[1]=0 (today).}
   \item{complete}{If TRUE, the tree with the extinct lineages and non-sampled lineages is returned (so the tree has round(n/frac[1]) extant tips). If FALSE, the extinct lineages and non-sampled lineages are suppressed.}
+\item{K}{If K>0, then a density-dependent speciation rate = lambda*(1-numberspecies/K) is used. Only works currently for mu=0.}
+\item{norm}{If norm = TRUE the simulations are exact. If norm = FALSE: see Stadler 2011, p.678, point (7) - tree is always returned when N=0.}
 }
 %\details{
 %todo
@@ -27,7 +29,7 @@ sim.rateshift.taxa(n, numbsim, lambda, mu, frac, times, complete = TRUE)
  \item{out[[2]] }{Vector of age of trees (time to root plus length of edge above root)}
 }
 \references{
-T. Stadler: Simulating trees on a fixed number of extant species. Syst. Biol. (2011).
+T. Stadler: Simulating trees on a fixed number of extant species. Syst. Biol. (2011) 60: 676-684.
 }
 \author{Tanja Stadler }
 %\note{ %~~further notes~~ 

@@ -27,7 +27,7 @@ When complete = TRUE: all extinct and non-sampled lineages are included, i.e. th
  \item{out[[2]] }{Vector of age of trees (time to root plus length of edge above root)}
 
 }
-\references{ T. Stadler: Simulating trees on a fixed number of extant species. Syst. Biol. (2011).
+\references{ T. Stadler: Simulating trees on a fixed number of extant species. Syst. Biol. (2011) 60: 676-684.
 
 T. Stadler: On incomplete sampling under birth-death models and connections to the sampling-based coalescent.
 J. Theo. Biol. (2009) 261: 58-66.}
