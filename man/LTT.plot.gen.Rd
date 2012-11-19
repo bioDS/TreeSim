@@ -30,9 +30,11 @@ lambda<-0.3
 mu<-0.2
 K<-40
 
-tree<- sim.bd.age(age,numbsim,lambda,mu,mrca=TRUE,complete=FALSE,K=K)
-ltttrees<-LTT.plot.gen(list(tree))
-plot(ltttrees[[1]],type="l")
+#only with ape until 3.0-4
+#tree<- sim.bd.age(age,numbsim,lambda,mu,mrca=TRUE,complete=FALSE,K=K)
+#ltttrees<-LTT.plot.gen(list(tree))
+#plot(ltttrees[[1]],type="l")
+
 #alternatively use LTT.plot() for plotting!
 
 numbsim<-10

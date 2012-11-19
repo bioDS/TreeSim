@@ -21,7 +21,7 @@ sim.bdtypes.stt.taxa(n,lambdavector,deathvector,sampprobvector,init=-1)
 \value{
 \item{out}{Phylogenetic tree with n sampled tips. In out$states, the states for the tips are stored.}
 }
-\references{ T. Stadler, S. Bonhoeffer: Uncovering epidemiological dynamics in heterogeneous host populations using phylogenetic methods. Manuscript, 2012.
+\references{ T. Stadler, S. Bonhoeffer: Uncovering epidemiological dynamics in heterogeneous host populations using phylogenetic methods. In press, Phil. Trans. Roy. Soc. B, 2012.
 }
 \author{Tanja Stadler}
 \note{ 

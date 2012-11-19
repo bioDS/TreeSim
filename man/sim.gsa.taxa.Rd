@@ -25,7 +25,7 @@ When complete = TRUE: We set frac = 1.}
 \value{
 \item{treearray}{Array of sampled trees with n  extant sampled leaves}
 }
-\references{T. Stadler: Simulating trees on a fixed number of extant species. Submitted. 2010.
+\references{T. Stadler: Simulating trees on a fixed number of extant species. Syst. Biol. (2011) 60: 676-684.
 
 K. Hartmann, D. Wong, T. Stadler: Sampling trees from evolutionary models.  Syst. Biol. (2010) 59: 465-476.}
 \author{Tanja Stadler}

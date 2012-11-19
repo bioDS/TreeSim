@@ -11,8 +11,8 @@ The package simulates phylogenetic trees where (i) all tips are sampled at one t
 \tabular{ll}{
 Package: \tab TreeSim\cr
 Type: \tab Package\cr
-Version: \tab 1.6\cr
-Date: \tab 2012-05-09\cr
+Version: \tab 1.7\cr
+Date: \tab 2012-11-19\cr
 License: \tab GPL-2  \cr
 LazyLoad: \tab yes\cr
 }
@@ -30,7 +30,7 @@ K. Hartmann, D. Wong,  T. Stadler: Sampling trees from evolutionary models. Syst
 T. Stadler: On incomplete sampling under birth-death models and connections to the sampling-based coalescent.
 J. Theo. Biol. (2009) 261: 58-66.
 
-N. Cusimano, T. Stadler, S. Renner: A new method for handling missing species in diversification analysis applicable to randomly or non-randomly sampled phylogenies. In press. Syst. Biol.
+N. Cusimano, T. Stadler, S. Renner: A new method for handling missing species in diversification analysis applicable to randomly or non-randomly sampled phylogenies. Syst. Biol. (2012) 61:785-792.
 }
 %\keyword{tree, phylogeny, simulation}
 \seealso{

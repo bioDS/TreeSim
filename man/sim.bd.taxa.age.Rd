@@ -57,7 +57,8 @@ sim.bd.taxa.age(n, numbsim, lambda, mu, frac, age, mrca = FALSE)
 # sampling probability frac, and time age since the most recent 
 # common ancestor of the extant sampled species:
 
-sim.bd.taxa.age(n, numbsim, lambda, mu, frac, age, mrca = TRUE)
+#only with ape until 3.0-4
+#sim.bd.taxa.age(n, numbsim, lambda, mu, frac, age, mrca = TRUE)
 
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the

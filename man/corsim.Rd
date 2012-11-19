@@ -20,7 +20,8 @@ corsim(x,lambda,mu,missing,told=0,tyoung=0)
 \value{
 \item{x}{Vector of input and simulated speciation times.}
 }
-\references{N. Cusimano, T. Stadler, S. Renner: A new method for handling missing species in diversification analysis applicable to randomly or non-randomly sampled phylogenies. Submitted.}
+\references{N. Cusimano, T. Stadler, S. Renner: A new method for handling missing species in diversification analysis applicable to randomly or non-randomly sampled phylogenies. Syst. Biol. (2012) 61:785-792.
+}
 \author{Tanja Stadler }
 \seealso{ sim.bd.age, sim.rateshift.taxa, sim.gsa.taxa, birthdeath.tree }
 \examples{

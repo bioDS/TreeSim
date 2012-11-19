@@ -22,7 +22,7 @@ sim.bdsky.stt(n,lambdasky,deathsky,timesky,sampprobsky,rho=0,timestop=0)
 \value{
 \item{out}{Phylogenetic tree with n sampled tips or a fixed age timestop.}
 }
-\references{ T. Stadler, D. Kuehnert, S. Bonhoeffer, A. Drummond: The birth-death skyline plot. Manuscript, 2012.
+\references{ T. Stadler, D. Kuehnert, S. Bonhoeffer, A. Drummond: The birth-death skyline plot. In press, Proc. Nat. Acad. Sci., 2012.
 }
 \author{Tanja Stadler}
 \note{ 
