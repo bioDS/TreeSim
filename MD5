@@ -1,4 +1,4 @@
-6bb05f422386f44f63733c8e57b78c5d *DESCRIPTION
+dd91707994a4ca22b2b09fd92976162e *DESCRIPTION
 df755bce62bd058f8b26c648bd8d58e9 *NAMESPACE
 1f620ac03368e1dde3727fb0da261c6a *R/LTT.average.root.R
 f1bd630ddfdd51e3964ae6fe3dc7a288 *R/LTT.general.R
@@ -17,9 +17,9 @@ daee743d8d1690b023af79d28923cc26 *R/gettimeperiod.R
 7a01e01a606f91290cd59eb99cc02ae6 *R/getx.R
 beac9b23e9690f9d5f4a3eb3ec392184 *R/intp1.R
 62554fb23a65758d8866605b2a31361c *R/numbspecies.R
-9dab2df8be2bf71135087f09d1eb7b9f *R/reconstructed.age.R
+b929811329c55b9790eff57847814746 *R/reconstructed.age.R
 732c799159208a4a4935f88ffcd81f21 *R/reconstructed.taxa.R
-adcaefdb3183daabcce5cf499c6f48fd *R/reconstructed.taxa.single.R
+3912a3bb7ec82a7f158caf7ba263608a *R/reconstructed.taxa.single.R
 3c647a08f40de9c4372f98306d69d7b1 *R/sim.bd.age.R
 cd2fc459de40e02ce4a2c5f35b9cc7e3 *R/sim.bd.age.help.R
 137153f534183fda742e535c347afc27 *R/sim.bd.age.loop.R
@@ -50,11 +50,11 @@ b83b8e4361629cf0614634dc2f5f07a1 *R/sim2.bd.mrca.reconst.R
 8d5224dfd1f09f45b3d8f37057ecb6f0 *R/sim2.bd.rateshift.single.R
 f92f6dc1a380215e7f982a09e160fa3d *R/sim2.bd.reverse.R
 64d4e88f2fe3652e747e57c1213be2e7 *R/sim2.bd.reverse.single.R
-d57aa659b65fe0aa46e5b64a535fdf64 *R/sim2.bd.ssa.R
+52c375076d42fd2df16f8acfa9036be8 *R/sim2.bd.ssa.R
 206057989ce8723ecb0c40112dbcab3d *R/sim2.gsa.R
 281afe670f2ea4a190ad528ae58c1ac9 *man/LTT.plot.Rd
 17c3ba4b7a728a99d1f70d6452503597 *man/LTT.plot.gen.Rd
-0be6a0850d83c9ab766ddb0a7a214b06 *man/TreeSim-package.Rd
+5e3e15bb3a10efe6ca4db3f88e960127 *man/TreeSim-package.Rd
 78488e958345184d811d41a026932a1a *man/corsim.Rd
 4aeefd0d9e06bfaec7d9d81bb705bbf7 *man/getx.Rd
 03f3ad4acff2f805faeae91fab46c549 *man/sim.bd.age.Rd

@@ -4,7 +4,7 @@ function(treearray,frac){
 	for (j in 1:length(treearray)){	
 		temp <- treearray[[j]]
 		if (class(temp)=="phylo"){
-		temp<-prune.extinct.taxa(temp,tol = 0.00001)
+		temp<-drop.extinct(temp,tol = 0.00001)
 		ntotal<- length(temp$tip.label)
 		delete <- round((1-frac)*ntotal)
 		if (ntotal == delete) {

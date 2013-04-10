@@ -1,7 +1,7 @@
 reconstructed.taxa.single <-
 function(tree,delete){
 		temp <- tree
-		temp<-prune.extinct.taxa(temp,tol = 0.000001)
+		temp<-drop.extinct(temp,tol = 0.000001)
 		ntotal<- length(temp$tip.label)
 		if (ntotal == delete) {
 			phy = 0
