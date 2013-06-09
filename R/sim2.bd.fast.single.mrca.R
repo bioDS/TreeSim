@@ -13,7 +13,11 @@ function(n,lambda,mu,rho,mrca){
 			#t2<-add.rootedge(t2,mrca)
 			}	
 	    if (class(t1) == "phylo" && class(t2) == "phylo"){
-			t<- bind.tree(t1,t2,where="root")
+	    	t1$root.edge<-t1$edge.length[1]
+			t1<-collapse.singles(t1)
+	    	t2$root.edge<-t2$edge.length[1]
+			t2<-collapse.singles(t2)
+			t<- t1+t2
 			t$tip.label <- paste("t", sample(t$Nnode+1), sep = "")
 		} else if (class(t1) == "phylo" || class(t2) == "phylo")  {
 			if (class(t2) == "phylo") {

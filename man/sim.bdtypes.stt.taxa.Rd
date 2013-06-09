@@ -34,5 +34,6 @@ lambda <- rbind(c(2,1),c(3,4))
 mu <- c(1,1)
 sampprob <-c(0.5,0.5)
 numbsim<-2
-trees<-lapply(rep(n,numbsim),sim.bdtypes.stt.taxa,lambdavector=lambda,deathvector=mu,sampprobvector=sampprob)
+trees<-lapply(rep(n,numbsim),sim.bdtypes.stt.taxa,
+lambdavector=lambda,deathvector=mu,sampprobvector=sampprob)
 }

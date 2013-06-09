@@ -35,6 +35,7 @@ told<-4.5
 # We simulate 5 additional speciation times (i.e. five additional species):
 missing<-5
 
-# xcompleted is x plus 5 additional speciation events between 0.5 and 4.5 timesteps in the past. xcompleted corresponds to a 10-species tree:
+# xcompleted is x plus 5 additional speciation events between 0.5 and 4.5 timesteps 
+# in the past. xcompleted corresponds to a 10-species tree:
 xcompleted<-corsim(x,lambda,mu,missing,told,tyoung)
 }

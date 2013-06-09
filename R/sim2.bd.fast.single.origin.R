@@ -86,6 +86,7 @@ phy$tip.label <- paste("t", sample(length(leaves)), sep = "")
 phy$edge.length <- edge.length
 phy$Nnode <- length(leaves)
 class(phy) <- "phylo"
+storage.mode(phy$edge) <- "integer"
 
 phy
 }

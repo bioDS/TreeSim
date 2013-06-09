@@ -1,8 +1,8 @@
 Package: TreeSim
 Type: Package
 Title: Simulating trees under the birth-death model
-Version: 1.8
-Date: 2013-04-10
+Version: 1.9
+Date: 2013-06-09
 Author: Tanja Stadler
 Maintainer: Tanja Stadler <tanja.stadler@env.ethz.ch>
 Depends: ape, geiger
@@ -34,7 +34,7 @@ Description: The package simulates phylogenetic trees where (i) all
         sim.bdtypes.stt.taxa.
 License: GPL-2
 LazyLoad: yes
-Packaged: 2013-04-16 13:37:23 UTC; tanja
+Packaged: 2013-06-09 17:00:40 UTC; tanja
 NeedsCompilation: no
 Repository: CRAN
-Date/Publication: 2013-04-16 18:14:07
+Date/Publication: 2013-06-09 19:08:09

@@ -1,4 +1,4 @@
-dd91707994a4ca22b2b09fd92976162e *DESCRIPTION
+ddeb3fb0f89099916ddfc07706379b1d *DESCRIPTION
 df755bce62bd058f8b26c648bd8d58e9 *NAMESPACE
 1f620ac03368e1dde3727fb0da261c6a *R/LTT.average.root.R
 f1bd630ddfdd51e3964ae6fe3dc7a288 *R/LTT.general.R
@@ -40,8 +40,8 @@ be235f29183e290625ccdcb4c7250592 *R/sim2.bd.age.R
 6302e5eb0f24900dcb3dcd7e0327a739 *R/sim2.bd.fast.R
 d40a4f1a10749b618a55611029ada713 *R/sim2.bd.fast.age.R
 d6fda220c8e09b34b1e2434c4971c5ca *R/sim2.bd.fast.single.R
-565f4f8ef65d406b10822e8ecc81e175 *R/sim2.bd.fast.single.mrca.R
-8e663f81720f2aee3fc00c14e4eb26db *R/sim2.bd.fast.single.origin.R
+d4ad7afb5497a261e66a307d0ebbaf6f *R/sim2.bd.fast.single.mrca.R
+9920139f10aba5846c3240847bc175f3 *R/sim2.bd.fast.single.origin.R
 ae06061aaea86dfceebf3a1f5be9bf21 *R/sim2.bd.gsa.R
 383df4b31eb7510395b4d6c47864cb81 *R/sim2.bd.mrca.R
 b83b8e4361629cf0614634dc2f5f07a1 *R/sim2.bd.mrca.reconst.R
@@ -54,13 +54,13 @@ f92f6dc1a380215e7f982a09e160fa3d *R/sim2.bd.reverse.R
 206057989ce8723ecb0c40112dbcab3d *R/sim2.gsa.R
 281afe670f2ea4a190ad528ae58c1ac9 *man/LTT.plot.Rd
 17c3ba4b7a728a99d1f70d6452503597 *man/LTT.plot.gen.Rd
-5e3e15bb3a10efe6ca4db3f88e960127 *man/TreeSim-package.Rd
-78488e958345184d811d41a026932a1a *man/corsim.Rd
+e0f25da52512b5868956dfb5e7ce2e8f *man/TreeSim-package.Rd
+134bc98d733e971a04be9b93e4f98977 *man/corsim.Rd
 4aeefd0d9e06bfaec7d9d81bb705bbf7 *man/getx.Rd
 03f3ad4acff2f805faeae91fab46c549 *man/sim.bd.age.Rd
 b24b3a8e7ccd196ac7bafc749c4b303f *man/sim.bd.taxa.Rd
 599d4054d58fa4c9c3694a8fca780235 *man/sim.bd.taxa.age.Rd
-ee697dd6e250571f04383c8ad66905ee *man/sim.bdsky.stt.Rd
-809eeb53ec18fb8420aec75a142850fb *man/sim.bdtypes.stt.taxa.Rd
+16ff2346300ccc300dca21126c80a878 *man/sim.bdsky.stt.Rd
+d6c5d44427cf4573eca155dd337d2dac *man/sim.bdtypes.stt.taxa.Rd
 dafdfe8e88746fe52326cea0defc4d64 *man/sim.gsa.taxa.Rd
 eee9d5f16e31827b7c93037570153750 *man/sim.rateshift.taxa.Rd

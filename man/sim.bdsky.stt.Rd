@@ -36,5 +36,6 @@ mu <- c(1,0.5,1.5)
 sampprob <-c(0.5,0.5,0.5)
 times<-c(0,1,2)
 numbsim<-2
-trees<-lapply(rep(n,numbsim),sim.bdsky.stt,lambdasky=lambda,deathsky=mu,timesky=times,sampprobsky=sampprob,rho=0,timestop=0)
+trees<-lapply(rep(n,numbsim),sim.bdsky.stt,lambdasky=lambda,deathsky=mu,
+timesky=times,sampprobsky=sampprob,rho=0,timestop=0)
 }

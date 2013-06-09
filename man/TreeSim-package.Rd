@@ -11,8 +11,8 @@ The package simulates phylogenetic trees where (i) all tips are sampled at one t
 \tabular{ll}{
 Package: \tab TreeSim\cr
 Type: \tab Package\cr
-Version: \tab 1.8\cr
-Date: \tab 2013-04-10\cr
+Version: \tab 1.9\cr
+Date: \tab 2013-06-09\cr
 License: \tab GPL-2  \cr
 LazyLoad: \tab yes\cr
 }
