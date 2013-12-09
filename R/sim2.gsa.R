@@ -9,11 +9,11 @@ sim2.gsa<-function (treelist, n, sampling)
     k <- 0
     for (j in 1:length(treelist)) {
         if (class(treelist[[j]]) == "phylo") {
-            numbs <- TreeSim:::getnumbs(treelist[[j]])
-            temp <- TreeSim:::gettimelength(numbs, n)
+            numbs <- getnumbs(treelist[[j]])
+            temp <- gettimelength(numbs, n)
             numbsvector <- c(numbsvector, list(numbs))
             timesvector <- c(timesvector, list(temp))
-            timeperiodvector <- c(timeperiodvector, list(TreeSim:::gettimeperiod(numbs, 
+            timeperiodvector <- c(timeperiodvector, list(gettimeperiod(numbs, 
                 n)))
             timeoverallvector <- c(timeoverallvector, sum(temp))
             sumtimes <- sumtimes + sum(temp)
@@ -43,10 +43,10 @@ sim2.gsa<-function (treelist, n, sampling)
                   cutinterval <- timeperiods[jtest]
                   cuttime <- numbs[cutinterval, 2] - runif(1, 
                     min = 0, max = timelength[jtest])
-                  if (cuttime > max(TreeSim:::branching.times.complete(tree))) {
+                  if (cuttime > max(branching.times.complete(tree))) {
                     stop("error")
                   }
-                  treecut <- TreeSim:::cuttree(tree, cuttime)
+                  treecut <- cuttree(tree, cuttime)
                   treearray <- c(treearray, list(reorder(treecut)))
                 }
             }
