@@ -1,9 +1,9 @@
 \name{sim.bd.taxa}
 \alias{sim.bd.taxa}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{sim.bd.taxa: Simulating birth-death trees on a fixed number of extant taxa}
+\title{sim.bd.taxa: Simulating birth-death trees on a fixed number of extant taxa.}
 \description{
-sim.bd.taxa simulates trees on n species under the constant rate birth-death process. The method allows for incomplete sampling, i.e. (i) only a fixed fraction of all extant tips is included in the sampled tree or (ii) each tip from a big tree is included with a fixed probability. In both cases, the tree is conditioned to have n tips after sampling.
+sim.bd.taxa simulates trees on n species under the constant rate birth-death process. The method allows for incomplete sampling, i.e. (i) only a fixed fraction of all extant tips is included in the sampled tree or (ii) each extant tip from a complete tree is included with a fixed probability. In both cases, the tree is conditioned to have n tips after sampling. If you want to relax the assumption of constant rates, this function will not work. If you want to change rates through time use sim.rateshift.taxa. If you want to have species-age dependent rates, use sim.taxa in R package TreeSimGM.
 }
 \usage{
 sim.bd.taxa(n, numbsim, lambda, mu, frac = 1, complete = TRUE,
@@ -11,31 +11,27 @@ sim.bd.taxa(n, numbsim, lambda, mu, frac = 1, complete = TRUE,
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{n}{Number of extant sampled leaves}
-  \item{numbsim}{Number of trees to simulate}
-  \item{lambda}{Speciation rate}
-  \item{mu}{Extinction rate}
-  \item{frac}{When complete = FALSE: Sampling fraction: If stochsampling=FALSE: The actual number of tips is n/frac, but only n tips are included (incomplete sampling). If stochsampling=TRUE: Each tip is included into the final tree with probability frac.
-When complete = TRUE: all extinct and non-sampled lineages are included, i.e. the tree has n/frac extant leaves.}
+  \item{n}{Number of extant sampled tips.}
+  \item{numbsim}{Number of trees to simulate.}
+  \item{lambda}{Speciation rate.}
+  \item{mu}{Extinction rate.}
+  \item{frac}{When complete = FALSE and stochsampling=FALSE: The actual number of tips is n/frac, but only n tips are included (incomplete sampling). When complete = FALSE and stochsampling=TRUE: Each tip is included into the final tree with probability frac. When complete = TRUE: all extinct and non-sampled lineages are included, i.e. the tree has n/frac extant tips.}
   \item{complete}{If TRUE, the tree with the extinct and non-sampled lineages is returned. If FALSE, the extinct lineages are suppressed.}
   \item{stochsampling}{See frac.}
 }
 %\details{
 %todo}
 \value{
-\item{out[[1]] }{List of numbsim simulated trees with n extant sampled leaves}
- \item{out[[2]] }{Vector of age of trees (time to root plus length of edge above root)}
-
+\item{out}{List of numbsim simulated trees with n extant sampled tips.}
 }
-\references{ T. Stadler: Simulating trees on a fixed number of extant species. Syst. Biol. (2011) 60: 676-684.
+\references{ T. Stadler. Simulating trees on a fixed number of extant species. Syst. Biol., 60: 676-684, 2011.
 
-T. Stadler: On incomplete sampling under birth-death models and connections to the sampling-based coalescent.
-J. Theo. Biol. (2009) 261: 58-66.}
+T. Stadler. On incomplete sampling under birth-death models and connections to the sampling-based coalescent. Jour. Theo. Biol. 261: 58-66, 2009.}
 \author{Tanja Stadler }
 \note{ 
 For stochsampling = TRUE: The algorithm is fast for the critical process, lambda=mu.
 }
-\seealso{ sim.bd.age, sim.rateshift.taxa, sim.gsa.taxa, birthdeath.tree }
+\seealso{ sim.bd.age, sim.rateshift.taxa, sim.gsa.taxa, birthdeath.tree, sim.taxa }
 \examples{
 n<-10
 lambda <- 2.0
@@ -66,4 +62,3 @@ sim.bd.taxa(n,numbsim,lambda,mu,frac,complete=FALSE,stochsampling=FALSE)
 % R documentation directory.
 %\keyword{birth-death tree}
 %\keyword{ phylogenetic tree}
-%\keyword{simulation}% __ONLY ONE__ keyword per line

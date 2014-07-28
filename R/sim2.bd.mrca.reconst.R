@@ -10,7 +10,7 @@ treearray<- list()
 			#}
 			phy <- reconstructed.age(phy,frac)
 			if (class(phy[[1]])=="phylo"){
-				if (max(branching.times.complete(phy[[1]]))>(mrca-0.0001)){
+				if (max(branching.times.complete(phy[[1]]))>(mrca-0.0001)){   #Tanja 8.7.14 unnecessary!? maybe. or: in the reconstructed tree there may be the mrca deleted
 					treearray <- c(treearray,list(phy[[1]]))
 					temp = 1
 					}

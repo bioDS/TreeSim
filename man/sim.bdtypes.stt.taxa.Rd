@@ -10,24 +10,25 @@ sim.bdtypes.stt.taxa(n,lambdavector,deathvector,sampprobvector,init=-1)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{n}{Number of sampled leaves}
+  \item{n}{Number of sampled tips.}
   \item{lambdavector}{Matrix of dimension kxk, where k is the number of different states. The entry (i,j) is the rate with which an individual in state i gives rise to a new lineage of state j.}
   \item{deathvector}{Vector of dimension k, the entry i is the death rate of an individual in state i.}
   \item{sampprobvector}{Vector of dimension k, the entry i is the probability of an individual in state i being sampled upon death, i.e. being included into the final tree.}
-  \item{init}{Default is -1, meaning the initial individual is in a random state (which is chosen from the equilibrium distribution of states). If init>0, then the initial state is init.}
+  \item{init}{Default is -1, meaning the initial individual is in a random state (which is chosen from the equilibrium distribution of states). If init>0, then the initial state is 'init'.}
 }
 %\details{
 %todo}
 \value{
-\item{out}{Phylogenetic tree with n sampled tips. In out$states, the states for the tips are stored.}
+\item{out}{Phylogenetic tree with 'n' sampled tips. In out$states, the states for the tips are stored.}
 }
-\references{ T. Stadler, S. Bonhoeffer: Uncovering epidemiological dynamics in heterogeneous host populations using phylogenetic methods. In press, Phil. Trans. Roy. Soc. B, 2012.
+\references{ T. Stadler, S. Bonhoeffer. Uncovering epidemiological dynamics in heterogeneous host populations using phylogenetic methods. Phil. Trans. Roy. Soc. B, 368 (1614): 20120198, 2013.
 }
 \author{Tanja Stadler}
 \note{ 
 A large number of trees can be obtained using the R function lapply. The tree can be plotted using the R package ape function plot(collapse.singles(out)). sim.bdtypes.stt.taxa function extends the simulator in the R package diversitree to trees which contain tips being sampled sequentially.}
 \seealso{ sim.bdsky.stt }
 \examples{
+# Simulate two trees with 10 tips
 set.seed(1)
 n<-10
 lambda <- rbind(c(2,1),c(3,4))

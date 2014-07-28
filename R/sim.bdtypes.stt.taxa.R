@@ -140,7 +140,10 @@ sim.bdtypes.stt.taxa <- function(n, lambdavector,deathvector,sampprobvector,init
 	phy$Nnode <- length(sampled)
 	phy$states<-typessampledNew
 	class(phy) <- "phylo"
-	phy2 <- phy
+	br<-sort(getx(phy,sersampling=1),decreasing=TRUE)
+        phy$root.edge<-br[1]-br[2]
+        phy<-collapse.singles(phy)
+        phy2 <- phy
 
 phy2
 }

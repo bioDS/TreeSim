@@ -1,28 +1,28 @@
 \name{sim.bd.taxa.age}
 \alias{sim.bd.taxa.age}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{sim.bd.taxa.age: Simulating birth-death trees with a given age on a fixed number of extant taxa}
+\title{sim.bd.taxa.age: Simulating birth-death trees with a given age on a fixed number of extant taxa.}
 \description{
-sim.bd.taxa.age simulates trees on n species with a (i) fixed time since origin or (ii) fixed time since the most recent common ancestor of the sampled species under the constant rate birth-death process. The method allows for incomplete sampling, i.e. each tip from a big tree is included with a fixed probability. The tree is conditioned to have n tips after sampling and a fixed time since origin or since the most recent common ancestor of the sampled species.
+sim.bd.taxa.age simulates trees on n species with a (i) fixed time since origin or (ii) fixed time since the most recent common ancestor of the sampled species under the constant rate birth-death process. The method allows for incomplete sampling, i.e. each extant tip from a complete tree is included with a fixed probability. The tree is conditioned to have n tips after sampling and a fixed time since origin or since the most recent common ancestor of the sampled species.
 }
 \usage{
 sim.bd.taxa.age(n, numbsim, lambda, mu, frac = 1, age, mrca = FALSE)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{n}{Number of extant sampled leaves}
-  \item{numbsim}{Number of trees to simulate}
-  \item{lambda}{Speciation rate}
-  \item{mu}{Extinction rate}
+  \item{n}{Number of extant sampled tips.}
+  \item{numbsim}{Number of trees to simulate.}
+  \item{lambda}{Speciation rate.}
+  \item{mu}{Extinction rate.}
   \item{frac}{ Each tip is included into the final tree with probability frac.}
-  \item{age}{The time since origin / most recent common ancestor}
+  \item{age}{The time since origin / most recent common ancestor.}
   \item{mrca}{If mrca = FALSE: The time since the origin of the process. If mrca = TRUE: The time since the most recent common ancestor of the sampled species.}
 }
 %\details{
 %%  ~~ If necessary, more details than the description above ~~
 %}
 \value{
-\item{treearray }{Array of numbsim trees with n>1 leaves with a given age. The extinct lineages are not included.}
+\item{treearray }{Array of numbsim trees with n>1 tips with a given age. The extinct lineages are not included.}
 }
 
 \references{T. Stadler: On incomplete sampling under birth-death models and connections to the sampling-based coalescent.
@@ -57,12 +57,10 @@ sim.bd.taxa.age(n, numbsim, lambda, mu, frac, age, mrca = FALSE)
 # sampling probability frac, and time age since the most recent 
 # common ancestor of the extant sampled species:
 
-#only with ape until 3.0-4
-#sim.bd.taxa.age(n, numbsim, lambda, mu, frac, age, mrca = TRUE)
+sim.bd.taxa.age(n, numbsim, lambda, mu, frac, age, mrca = TRUE)
 
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
 %\keyword{birth-death tree}
 %\keyword{ phylogenetic tree}
-%\keyword{simulation}% __ONLY ONE__ keyword per line

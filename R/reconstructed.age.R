@@ -5,6 +5,7 @@ function(treearray,frac){
 		temp <- treearray[[j]]
 		if (class(temp)=="phylo"){
 		temp<-drop.extinct(temp,tol = 0.00001)
+		if (class(temp) != "phylo") {phy <- c(phy, list(1-round(1-frac)))} else {
 		ntotal<- length(temp$tip.label)
 		delete <- round((1-frac)*ntotal)
 		if (ntotal == delete) {
@@ -21,7 +22,7 @@ function(treearray,frac){
 		temp<-drop.tip(temp,droptips)
 		}
 		phy <- c(phy, list(temp))	}
-		} else {
+		}} else {
 		phy <- c(phy, list(temp))	
 		}
 	}

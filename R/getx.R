@@ -1,6 +1,22 @@
 getx<-function(datatree,sersampling=0){
     datatree$node.label<-NULL	
-	if (sersampling==1){x<-get.times.polytomy(datatree)} else {
+	if (sersampling==1){
+		#9.7.14
+		if (length(datatree$tip.label)==2) {
+			temp<-datatree$edge.length
+			ttype <- c(0,0,1)
+			temp2<-0
+			if (length(temp)==3) {ttype<-c(ttype,1)
+				temp2<-temp[1]
+				temp<-temp[-1]
+				}
+			times<-ttype*0
+			times[2]<-abs(temp[1]-temp[2])
+			times[3]<-max(temp[1],temp[2])
+			if (temp2>0) {times[4]<-temp2+times[3]}
+			x<-cbind(times,ttype)
+		} else {
+		x<-get.times.polytomy(datatree)}} else {
 	br<-branching.times(datatree)
 	edges<-datatree$edge
 	edges1<-edges[,1]
