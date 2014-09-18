@@ -33,7 +33,7 @@ rho=0,timestop=0,model="BD",N=0,trackinfecteds=FALSE)
 }
 \author{Tanja Stadler, Veronika Boskova}
 \note{ 
-A large number of trees can be obtained using the R function lapply. The tree can be plotted using the R package ape function plot(collapse.singles(tree)).  sim.bdsky.stt function extends the function sim.rateshift.taxa to trees which contain tips being sampled sequentially.}
+A large number of trees can be obtained using the R function lapply. The tree can be plotted using the R package ape function plot(tree).  sim.bdsky.stt function extends the function sim.rateshift.taxa to trees which contain tips being sampled sequentially.}
 \seealso{sim.bdtypes.stt.taxa}
 \examples{
 ### Set the values for birth rates (lambda), deathrates (mu),

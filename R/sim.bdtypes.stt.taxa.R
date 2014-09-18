@@ -1,4 +1,4 @@
-sim.bdtypes.stt.taxa <- function(n, lambdavector,deathvector,sampprobvector,init=-1){
+sim.bdtypes.stt.taxa <- function(n, lambdavector,deathvector,sampprobvector,init=-1,EI=FALSE,eliminate=0){
 
 	muvector<-deathvector*(1-sampprobvector)
 	psivector<-deathvector*sampprobvector
@@ -14,6 +14,8 @@ sim.bdtypes.stt.taxa <- function(n, lambdavector,deathvector,sampprobvector,init
 		if (r<f1){init <-1}
 	}
 	if ((init==-1) && (length(deathvector)!=2))  {init<-sample(1:length(deathvector),1)}
+
+	if (EI==TRUE){init<-1}
 
 	while(extincttree==1){
 	edge <- c(-1,-2)		#matrix of edges
@@ -46,12 +48,18 @@ sim.bdtypes.stt.taxa <- function(n, lambdavector,deathvector,sampprobvector,init
 			chosentype<-min(which(cumsum(sumrates)>r))
 			species <- sample(leaves[which(types==chosentype)],1)  	#the leaf undergoing the next event
 			lambda<-sum(lambdavector[chosentype,])
+			#7.9.14 EI model
+			gamma <- 0
+			if (EI==TRUE){
+			if (chosentype == 1) {gamma<-lambda
+				lambda <-0
+				}}
 			mu<-muvector[chosentype]
 			psi<-psivector[chosentype]
 			del <- which(leaves == species) #leaves[del]=species
 			specevent <- runif(1,0,1)		#event speciation, sampling or extinction
 			edgespecevent <- which(edge == species) - length(edge.length)
-			if ((lambda/(lambda+mu+psi)) > specevent) {
+			if ((lambda/(lambda+gamma+mu+psi)) > specevent) {
 				edge.length[edgespecevent] <- time-timecreation[- species]
 				edge <- rbind(edge,c(species,maxspecies-1))
 				edge <- rbind(edge,c(species,maxspecies-2))
@@ -64,9 +72,14 @@ sim.bdtypes.stt.taxa <- function(n, lambdavector,deathvector,sampprobvector,init
 				leaves <- leaves[- del]
 				types <- types[- del]
 				timecreation <- c(timecreation,time,time)}
-			else if (((lambda+psi)/(lambda+mu+psi)) > specevent) {	
+			else if (((lambda+gamma)/(lambda+gamma+mu+psi)) > specevent) {	#EI
+				types[del] <- 2
+			}
+			else if (((lambda+gamma+psi)/(lambda+gamma+mu+psi)) > specevent) {	
 				sampled<-c(sampled,leaves[del])
-				typessampled<-c(typessampled,chosentype)
+				if (EI == TRUE && length(typessampled)<eliminate){
+					typessampled<-c(typessampled,1)
+				} else {typessampled<-c(typessampled,chosentype)}
 				leaves <- leaves[- del]
 				types <- types[- del]
 				edge.length[edgespecevent] <- time-timecreation[- species]

@@ -1,4 +1,4 @@
-be9aae286dc48de2621913935e61e9d2 *DESCRIPTION
+34fd394dcae0d9d8ad7013cb777b8dcb *DESCRIPTION
 44bb0020a2572535ca3dc75b64f310be *NAMESPACE
 1f620ac03368e1dde3727fb0da261c6a *R/LTT.average.root.R
 f1bd630ddfdd51e3964ae6fe3dc7a288 *R/LTT.general.R
@@ -31,7 +31,7 @@ d4b3ada64befdb3614dea12531c0521a *R/sim.bd.taxa.age.R
 16933ec56856f4f85e06984cc4a1c7f1 *R/sim.bd.taxa.help.R
 2287d2c5b7c3ef932c2fd1d9355a221b *R/sim.bd.taxa.loop.R
 e34804c691fb1e727cf55fa76e997777 *R/sim.bdsky.stt.R
-1f38de27f77f4a9a24697be30eb2426b *R/sim.bdtypes.stt.taxa.R
+dcdf2d07a8a50958c6f70c8ca3964ccd *R/sim.bdtypes.stt.taxa.R
 6436a980a3a2ab3c2d87b0b59316d631 *R/sim.genespeciestree.R
 25e0145b6da6da916dfa805b45fc4bf7 *R/sim.genetree.R
 168fbc7aec61fa2b0c83b0519e443b3e *R/sim.gsa.taxa.R
@@ -58,15 +58,15 @@ f92f6dc1a380215e7f982a09e160fa3d *R/sim2.bd.reverse.R
 cc83536661d4199af6573c02cec0d114 *R/stats.R
 1b2498da1a0530034908069198259175 *man/LTT.plot.Rd
 e001afa3974c642531a7676def79b210 *man/LTT.plot.gen.Rd
-eb5f7b62f4dd040647bd7df0bfc8dc2b *man/TreeSim-package.Rd
+9538431abd4648ce5213cdf6845237ad *man/TreeSim-package.Rd
 300e04632d541c77d738022fe5c87135 *man/corsim.Rd
 1b7a99477ade754d1d20547bc32ca22f *man/cuttree.Rd
 afbdd8dde28e2d58c5127461896dbf74 *man/getx.Rd
 96f066f845f3d452d54c76d895391639 *man/sim.bd.age.Rd
 e31b07eae45755a617269cb220d9e145 *man/sim.bd.taxa.Rd
 6b4aa15489e628d38e52fce4f3da08cd *man/sim.bd.taxa.age.Rd
-6ef05e37f8aa9c16f8619193bdcd3b5e *man/sim.bdsky.stt.Rd
-633d9038d5ac110daed6340314c95bec *man/sim.bdtypes.stt.taxa.Rd
+71d6f8cbfbe1d37b97e829b8bc471ea5 *man/sim.bdsky.stt.Rd
+3c7016f4ba8b8faac0eadabc0fed0cd2 *man/sim.bdtypes.stt.taxa.Rd
 9b82c8e8510fca8c36f9565e71efcccd *man/sim.genespeciestree.Rd
 09f33fb060215b51cae01233c289b2aa *man/sim.genetree.Rd
 eca41bf2f924d975a2dc7eb2957291af *man/sim.gsa.taxa.Rd
