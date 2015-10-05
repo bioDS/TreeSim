@@ -40,17 +40,26 @@ for (i in 1:length(tree)){
 			bravg<-rbind(bravg,c(-origin[i],1))
 		}
 	}}
-bravg2<-bravg[order(bravg[,1]),]
-bravg3<-cbind(bravg2[,1],cumsum(bravg2[,2]))
-bravg3<-rbind(bravg3,c(0,bravg3[length(bravg3[,1]),2]))
-del<-vector()
-mini<-min(c(2*length(tree),length(bravg3[,1])-1))
-for (j in mini:1){
-		 if (abs(bravg3[j,1]-bravg3[(j+1),1])<10^(-8)) 
-			 {del<-c(del,j)
-			  }}
-bravg4<-bravg3[-del,]
-bravg4[,2]<-bravg4[,2]/length(tree)
-out<-c(list(bravg4),brall)
-out
+    bravg2 <- bravg[order(bravg[, 1]), ]
+    bravg3 <- cbind(bravg2[, 1], cumsum(bravg2[, 2]))
+    #print(bravg3)
+    bravg3 <- rbind(bravg3, c(0, bravg3[length(bravg3[, 1]), 
+        2]))
+    #print(bravg3)
+    bravg3[,2]<-bravg3[,2]/length(tree)  
+    out <- c(list(bravg3), brall)
+    out
+# # bravg2<-bravg[order(bravg[,1]),]
+# bravg3<-cbind(bravg2[,1],cumsum(bravg2[,2]))
+# bravg3<-rbind(bravg3,c(0,bravg3[length(bravg3[,1]),2]))
+# del<-vector()
+# mini<-min(c(2*length(tree),length(bravg3[,1])-1))
+# for (j in mini:1){
+		 # if (abs(bravg3[j,1]-bravg3[(j+1),1])<10^(-8)) 
+			 # {del<-c(del,j)
+			  # }}
+# bravg4<-bravg3[-del,]
+# bravg4[,2]<-bravg4[,2]/length(tree)
+# out<-c(list(bravg4),brall)
+# out
 }

@@ -30,27 +30,29 @@ age<-10
 lambda<-0.3
 mu<-0.2
 K<-40
-tree<- sim.bd.age(age,numbsim,lambda,mu,mrca=TRUE,complete=FALSE,K=K)
-# Plot of tree
-ltttrees<-LTT.plot.gen(list(tree))
-plot(ltttrees[[1]],type="l")
-#alternatively use LTT.plot() for plotting:
-LTT.plot(list(tree),avg=TRUE)
+# You can produce LTT plots as follows. 
+# (for now this is un-commented, as some combinations of geiger / TreeSim on certain platforms 
+# produce problems. If this is the case for you, please report to tanjs.stadler@bsse.ethz.ch).
+% tree<- sim.bd.age(age,numbsim,lambda,mu,mrca=TRUE,complete=FALSE,K=K)
+% # Plot of tree
+% ltttrees<-LTT.plot.gen(list(tree))
+% plot(ltttrees[[1]],type="l")
+% #alternatively use LTT.plot() for plotting:
+% LTT.plot(list(tree),avg=TRUE)
 
-# Simulation of a tree with the first lineage at time 10 in the past, 
-# under the density-dependent model
-numbsim<-10
-age<-10
-lambda<-0.3
-mu<-0
-K<-40
-tree<- sim.bd.age(age,numbsim,lambda,mu,mrca=FALSE,complete=FALSE,K=K)
-# Plot of tree
-ltttrees<-LTT.plot.gen(c(list(tree),list((1:10)*0+age)))
-plot(ltttrees[[5]],type="l")
-#alternatively use LTT.plot() for plotting!
+% # Simulation of a tree with the first lineage at time 10 in the past, 
+% # under the density-dependent model
+% numbsim<-10
+% age<-10
+% lambda<-0.3
+% mu<-0
+% K<-40
+% tree<- sim.bd.age(age,numbsim,lambda,mu,mrca=FALSE,complete=FALSE,K=K)
+% # Plot of tree
+% ltttrees<-LTT.plot.gen(c(list(tree),list((1:10)*0+age)))
+% plot(ltttrees[[5]],type="l")
+% #alternatively use LTT.plot() for plotting!
 }
-
 
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
