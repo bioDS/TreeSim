@@ -1,5 +1,5 @@
-47a0046bb7154773f3594f22da2cf1c0 *DESCRIPTION
-678578c265278b51c58f28ddbc70ad0e *NAMESPACE
+f52e837dffb3a6f463bfda3c51b09b43 *DESCRIPTION
+7c8f8c49201deada1e3b7b7608a301bd *NAMESPACE
 1f620ac03368e1dde3727fb0da261c6a *R/LTT.average.root.R
 f1bd630ddfdd51e3964ae6fe3dc7a288 *R/LTT.general.R
 efd1c49a5a54a2bed44fca5acadb4707 *R/LTT.plot.R
@@ -12,6 +12,7 @@ ae2fb235c9584bfbe68ca27f8305d39e *R/LTT.plot.gen.R
 02985a27cdc349f044f5b6b0e9bc5f51 *R/corsim.R
 3023be9a5172e10b67cb0ad197876bf2 *R/cuttree.R
 9bdc81aac90d730775d3f2d2b67df038 *R/extinction.times.R
+3706474d957c3835732a41ff3573866f *R/gamStat.R
 eb515147d4e144c93f50ac5c981bc939 *R/get.times.polytomy.R
 bfbbd691dc6e80866de0c1b74829dc92 *R/getnumbs.R
 9f370a5245cd2e717881b85d196d8500 *R/gettimelength.R
@@ -59,7 +60,7 @@ f92f6dc1a380215e7f982a09e160fa3d *R/sim2.bd.reverse.R
 cc83536661d4199af6573c02cec0d114 *R/stats.R
 41eb03d5f2682b67a64d9fcf057245fd *man/LTT.plot.Rd
 f67c38b1be8d400e7abab6db31f38dcf *man/LTT.plot.gen.Rd
-bcf853f010ff772f18234a0a145868b5 *man/TreeSim-package.Rd
+09b7e9db2225effef239aeeaa331b033 *man/TreeSim-package.Rd
 300e04632d541c77d738022fe5c87135 *man/corsim.Rd
 1b7a99477ade754d1d20547bc32ca22f *man/cuttree.Rd
 afbdd8dde28e2d58c5127461896dbf74 *man/getx.Rd
