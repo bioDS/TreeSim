@@ -1,8 +1,8 @@
 Package: TreeSim
 Type: Package
 Title: Simulating Phylogenetic Trees
-Version: 2.3
-Date: 2017-03-20
+Version: 2.4
+Date: 2019-03-08
 Author: Tanja Stadler
 Maintainer: Tanja Stadler <tanja.stadler@bsse.ethz.ch>
 Depends: ape, geiger
@@ -10,6 +10,6 @@ Description: Simulation methods for phylogenetic trees where (i) all tips are sa
 License: GPL-2
 LazyLoad: yes
 NeedsCompilation: no
-Packaged: 2017-03-20 10:07:39 UTC; tstadler
+Packaged: 2019-04-08 11:16:27 UTC; tstadler
 Repository: CRAN
-Date/Publication: 2017-03-20 10:52:26 UTC
+Date/Publication: 2019-04-08 16:52:56 UTC

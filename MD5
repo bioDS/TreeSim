@@ -1,4 +1,4 @@
-f52e837dffb3a6f463bfda3c51b09b43 *DESCRIPTION
+de6b80cc642157bcfb3f0e57c4570e3e *DESCRIPTION
 7c8f8c49201deada1e3b7b7608a301bd *NAMESPACE
 1f620ac03368e1dde3727fb0da261c6a *R/LTT.average.root.R
 f1bd630ddfdd51e3964ae6fe3dc7a288 *R/LTT.general.R
@@ -60,11 +60,11 @@ f92f6dc1a380215e7f982a09e160fa3d *R/sim2.bd.reverse.R
 cc83536661d4199af6573c02cec0d114 *R/stats.R
 41eb03d5f2682b67a64d9fcf057245fd *man/LTT.plot.Rd
 f67c38b1be8d400e7abab6db31f38dcf *man/LTT.plot.gen.Rd
-09b7e9db2225effef239aeeaa331b033 *man/TreeSim-package.Rd
+709eeea84150f9444a16705678fd1125 *man/TreeSim-package.Rd
 300e04632d541c77d738022fe5c87135 *man/corsim.Rd
 1b7a99477ade754d1d20547bc32ca22f *man/cuttree.Rd
 afbdd8dde28e2d58c5127461896dbf74 *man/getx.Rd
-96f066f845f3d452d54c76d895391639 *man/sim.bd.age.Rd
+4e27969d42e6cddf9573f0af1487835c *man/sim.bd.age.Rd
 e31b07eae45755a617269cb220d9e145 *man/sim.bd.taxa.Rd
 6b4aa15489e628d38e52fce4f3da08cd *man/sim.bd.taxa.age.Rd
 71d6f8cbfbe1d37b97e829b8bc471ea5 *man/sim.bdsky.stt.Rd

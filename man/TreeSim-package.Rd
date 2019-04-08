@@ -11,8 +11,8 @@ Simulation methods for phylogenetic trees where (i) all tips are sampled at one 
 \tabular{ll}{
 Package: \tab TreeSim\cr
 Type: \tab Package\cr
-Version: \tab 2.3\cr
-Date: \tab 2017-03-20\cr
+Version: \tab 2.4\cr
+Date: \tab 2019-03-08\cr
 License: \tab GPL-2  \cr
 LazyLoad: \tab yes\cr
 }

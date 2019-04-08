@@ -41,13 +41,13 @@ numbsim<-3
 # Simulating trees with time age since the origin:
 
 sim.bd.age(age,numbsim,lambda,mu,mrca=FALSE,complete=TRUE)
-sim.bd.age(age,numbsim,lambda,mu,frac,mrca=FALSE,complete=FALSE)
+% sim.bd.age(age,numbsim,lambda,mu,frac,mrca=FALSE,complete=FALSE)
 
-# Simulating trees with time age since the time of the most recent common 
-# ancestor of the extant and sampled species:
+% # Simulating trees with time age since the time of the most recent common 
+% # ancestor of the extant and sampled species:
 
-sim.bd.age(age,numbsim,lambda,mu,mrca=TRUE,complete=TRUE)
-sim.bd.age(age,numbsim,lambda,mu,frac,mrca=TRUE,complete=FALSE)
+% sim.bd.age(age,numbsim,lambda,mu,mrca=TRUE,complete=TRUE)
+% sim.bd.age(age,numbsim,lambda,mu,frac,mrca=TRUE,complete=FALSE)
 }
 
 % Add one or more standard keywords, see file 'KEYWORDS' in the
