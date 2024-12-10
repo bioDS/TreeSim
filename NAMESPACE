@@ -1,4 +1,4 @@
-export(sim.bd.taxa, sim.bd.age, sim.bd.taxa.age, sim.rateshift.taxa, sim.gsa.taxa, corsim,LTT.plot, LTT.plot.gen, getx, sim.bdtypes.stt.taxa, sim.bdsky.stt, cuttree, sim.genespeciestree, sim.genetree)
+export(sim.rateshift.age, sim.bd.taxa, sim.bd.age, sim.bd.taxa.age, sim.rateshift.taxa, sim.gsa.taxa, corsim,LTT.plot, LTT.plot.gen, getx, sim.bdtypes.stt.taxa, sim.bdsky.stt, cuttree, sim.genespeciestree, sim.genetree)
 
 import(ape)
 importFrom(geiger,drop.extinct)

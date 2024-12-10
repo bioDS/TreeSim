@@ -1,5 +1,6 @@
 # KT
-sim2.rateshift.origin <- function(n, age, lambdavec, muvec, frac, times, norm = TRUE) {
+sim2.rateshift.origin <- function(n, age, lambdavec, muvec, times, norm = TRUE) {
+    cat("sim2.rateshift.origin\n")
     check <- 0
     sumratiolam <- 0
     for (j in 1:length(lambdavec)) {
@@ -8,6 +9,7 @@ sim2.rateshift.origin <- function(n, age, lambdavec, muvec, frac, times, norm = 
         }
     }
     while (check == 0) {
+        cat("line 12\n")
         lambda <- lambdavec[1]
         lambda0 <- lambda
         edge <- c(-1, -2) # matrix of edges
@@ -22,16 +24,16 @@ sim2.rateshift.origin <- function(n, age, lambdavec, muvec, frac, times, norm = 
         extincttree <- 0
         stop <- 0
 
-        if (K > 0) {
-            lambda <- max(lambda0 * (1 - length(leaves) / K), 0)
-        }
+        # if (K > 0) {
+        #     lambda <- max(lambda0 * (1 - length(leaves) / K), 0)
+        # }
         mu <- muvec[1]
-        if (length(frac) == 1) {
-            doneME <- 1
-            nextextinction <- 0
-        } else {
-            nextextinction <- times[interval]
-        }
+        # if (length(frac) == 1) {
+        #     doneME <- 1
+        #     nextextinction <- 0
+        # } else {
+        nextextinction <- times[interval]
+        # }
         while (stop == 0) {
             if (length(leaves) == 0) {
                 # phy2 = 0
@@ -54,6 +56,7 @@ sim2.rateshift.origin <- function(n, age, lambdavec, muvec, frac, times, norm = 
                     #     }
                     # }
                     time <- time + timestep # time after origin
+                    cat(time, " ")
                     species <- sample(leaves, 1) # the leaf undergoing the next event
                     del <- which(leaves == species)
                     specevent <- runif(1, 0, 1) # event speciation or extinction
@@ -83,28 +86,30 @@ sim2.rateshift.origin <- function(n, age, lambdavec, muvec, frac, times, norm = 
                 }
             }
         }
-
+        cat("line 87\n")
         ## TODO: Insert rateshift changes here / check placement and contents vs. sim2.bd.rateshift.single
-        nadd <- round(length(leaves) / frac[interval])
-        if (nadd > length(leaves)) {
-            for (j in 1:(nadd - length(leaves))) {
-                timecreation <- c(timecreation, time)
-                extinct <- extinct + 1
-                leaves <- c(leaves, (maxleaf + extinct))
-                nodes <- c(nodes, (maxleaf + extinct))
-            }
-        }
+        # nadd <- round(length(leaves) / frac[interval])
+        # cat(nadd, " ", length(leaves), "\n")
+        # if (nadd > length(leaves)) {
+        #     for (j in 1:(nadd - length(leaves))) {
+        #         timecreation <- c(timecreation, time)
+        #         extinct <- extinct + 1
+        #         leaves <- c(leaves, (maxleaf + extinct))
+        #         nodes <- c(nodes, (maxleaf + extinct))
+        #     }
+        # }
         lambda <- lambdavec[interval]
         lambda0 <- lambda
         mu <- muvec[interval]
-        if (interval == length(frac)) {
-            doneME <- 1
-        } else {
-            interval <- interval + 1
-            nextextinction <- times[interval]
-        }
+        # if (interval == length(frac)) {
+        #     doneME <- 1
+        # } else {
+        interval <- interval + 1
+        nextextinction <- times[interval]
+        # }
         if (norm == TRUE) {
             sampletree <- runif(1, 0, 1)
+            cat(lambda, " ", sumratiolam, "\n")
             if (sampletree < (1 / lambda / (sumratiolam))) {
                 check <- 1
             }
