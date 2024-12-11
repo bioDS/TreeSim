@@ -1,5 +1,13 @@
 # KT
 sim2.rateshift.origin <- function(n, age, lambdavec, muvec, times, norm = TRUE) {
+    cat("rateshift origin call\n")
+    check <- 0
+    sumratiolam <- 0
+    for (j in 1:length(lambdavec)) {
+        if (lambdavec[j] > 0) {
+            sumratiolam <- sumratiolam + 1 / lambdavec[j]
+        }
+    }
     lambda <- lambdavec[1]
     lambda0 <- lambda
     mu <- muvec[1]

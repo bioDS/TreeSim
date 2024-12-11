@@ -4,5 +4,6 @@ sim.rateshift.age <- function(age, numbsim, lambda, mu, times, mrca = FALSE, com
         age = age, lambda = lambda, mu = mu, times = times,
         mrca = mrca, complete = complete, norm = norm
     )
+
     out
 }

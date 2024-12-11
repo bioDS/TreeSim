@@ -1,4 +1,5 @@
 sim2.bd.mrca <- function(mrca, numbsim, lambda, mu, K) {
+    cat("mrca call\n")
     phy2 <- list()
     if (K == 0) {
         for (j in 1:numbsim) {
