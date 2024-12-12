@@ -1,6 +1,5 @@
 sim2.bd.origin <-
     function(n, age, lambda, mu, K) {
-        cat("sim2.bd.origin call\n")
         lambda0 <- lambda
         edge <- c(-1, -2) # matrix of edges
         leaves <- c(-2) # list of extant leaves

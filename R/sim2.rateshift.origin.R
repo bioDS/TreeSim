@@ -1,6 +1,5 @@
 # KT
 sim2.rateshift.origin <- function(n, age, lambdavec, muvec, times, norm = TRUE) {
-    cat("rateshift origin call\n")
     check <- 0
     sumratiolam <- 0
     for (j in 1:length(lambdavec)) {
@@ -22,9 +21,10 @@ sim2.rateshift.origin <- function(n, age, lambdavec, muvec, times, norm = TRUE) 
     stop <- 0
     interval <- 1
     while (stop == 0) {
-        nextextinction <- times[interval]
+       
         lambda <- lambdavec[interval]
-        lambda0 <- lambda
+        lambda0 <- lambda 
+	nextextinction = times[interval+1]
         mu <- muvec[interval]
         if (length(leaves) == 0) {
             if (age > 0) {
@@ -34,12 +34,20 @@ sim2.rateshift.origin <- function(n, age, lambdavec, muvec, times, norm = TRUE) 
             stop <- 1
         } else {
             timestep <- rexp(1, (length(leaves) * (lambda + mu))) # time since last event
-            if (nextextinction < time) {
-                interval <- interval + 1
-                time <- nextextinction
-                next
+		if (age < time + timestep){
+		stop = 1
+		}
+		
+		else if (!(is.na(nextextinction)) && nextextinction < time + timestep) {
+        		interval = interval + 1
+			if (interval > length(times)){
+				stop <- 1
+			}	
+			else {	
+			time <- nextextinction
+			}
             } else {
-                if ((age > 0 && (time + timestep) < age) || age == 0) {
+                if (stop == 0 && ((age > 0 && (time + timestep) < age) || age == 0)) {
                     time <- time + timestep # time after origin
                     species <- sample(leaves, 1) # the leaf undergoing the next event
                     del <- which(leaves == species)
