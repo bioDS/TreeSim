@@ -1,30 +1,31 @@
 # KT
 sim2.rateshift.origin <- function(n, age, lambdavec, muvec, times, norm = TRUE) {
-    check <- 0
+    lambdavec = rev(lambdavec)
+    muvec = rev(muvec)
+    times = rev(times)
     sumratiolam <- 0
     for (j in 1:length(lambdavec)) {
         if (lambdavec[j] > 0) {
             sumratiolam <- sumratiolam + 1 / lambdavec[j]
         }
     }
+    check <- 0
     lambda <- lambdavec[1]
-    lambda0 <- lambda
     mu <- muvec[1]
     edge <- c(-1, -2) # matrix of edges
     leaves <- c(-2) # list of extant leaves
     timecreation <- c(0, 0) # time when species -2, -3, ... -n was created after origin
     extinct <- vector() # list of extinct leaves
     time <- 0 # time after origin
+    times = age - times
     maxspecies <- -2 # smallest species
     edge.length <- c(0) # edge length. if 0: leaf which didn't speciate /extinct yet
     extincttree <- 0
     stop <- 0
     interval <- 1
     while (stop == 0) {
-       
         lambda <- lambdavec[interval]
-        lambda0 <- lambda 
-	nextextinction = times[interval+1]
+        nextextinction <- times[interval]
         mu <- muvec[interval]
         if (length(leaves) == 0) {
             if (age > 0) {
@@ -34,18 +35,17 @@ sim2.rateshift.origin <- function(n, age, lambdavec, muvec, times, norm = TRUE) 
             stop <- 1
         } else {
             timestep <- rexp(1, (length(leaves) * (lambda + mu))) # time since last event
-		if (age < time + timestep){
-		stop = 1
-		}
-		
-		else if (!(is.na(nextextinction)) && nextextinction < time + timestep) {
-        		interval = interval + 1
-			if (interval > length(times)){
-				stop <- 1
-			}	
-			else {	
-			time <- nextextinction
-			}
+            if (age < time + timestep) {
+                stop <- 1
+                next
+            } else if (!(is.na(nextextinction)) && nextextinction < time + timestep) {
+                interval <- interval + 1
+                if (interval > length(times)) {
+                    stop <- 1
+                    next
+                } else {
+                    time <- nextextinction
+                }
             } else {
                 if (stop == 0 && ((age > 0 && (time + timestep) < age) || age == 0)) {
                     time <- time + timestep # time after origin
@@ -77,31 +77,6 @@ sim2.rateshift.origin <- function(n, age, lambdavec, muvec, times, norm = TRUE) 
         }
     }
 
-    if (extincttree == 0) { # length pendant edge
-        if (age == 0) {
-            check <- 0
-            while (check == 0) {
-                timestep <- rexp(1, (length(leaves) * (lambda + mu))) # time since last event
-                if (nextextinction < time) {
-                    interval <- interval + 1
-                    time <- nextextinction
-                    nextextinction <- times[interval]
-                    lambda <- lambdavec[interval]
-                    lambda0 <- lambda
-                    mu <- muvec[interval]
-                    if (interval > length(times)) {
-                        return(NULL)
-                    }
-                } else {
-                    check <- 1
-                    time <- time + timestep # time after origin
-                }
-            }
-        } else {
-            time <- age
-        }
-    }
-
 
     if (extincttree == 0 || age == 0) {
         # assign pendant edge length
@@ -116,8 +91,6 @@ sim2.rateshift.origin <- function(n, age, lambdavec, muvec, times, norm = TRUE) 
         edgetemp <- edge
 
         if (nodes == 2) {
-            # edge = c(2,1)
-            # leaves = c(1,2)
             phy2 <- 1
         } else {
             for (j in (1:nodes)) {
@@ -140,7 +113,6 @@ sim2.rateshift.origin <- function(n, age, lambdavec, muvec, times, norm = TRUE) 
                     }
                 }
             }
-
 
             phy <- list(edge = edge)
             phy$tip.label <- paste("t", sample(length(leaves) + length(extinct)), sep = "")
