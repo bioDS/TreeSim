@@ -1,4 +1,6 @@
 # KT
+# Edit made using Claude
+
 sim2.rateshift.origin <- function(n, age, lambdavec, muvec, times, norm = TRUE) {
     lambdavec = rev(lambdavec)
     muvec = rev(muvec)
@@ -76,7 +78,7 @@ sim2.rateshift.origin <- function(n, age, lambdavec, muvec, times, norm = TRUE) 
             }
         }
     }
-
+    if (extincttree == 0 && age > 0) time <- age
 
     if (extincttree == 0 || age == 0) {
         # assign pendant edge length
